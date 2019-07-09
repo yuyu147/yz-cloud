@@ -2,11 +2,11 @@
   <div id="header-top">
     <div class="inner">
       <div class="left">
-        <a class="nav-link-left" href="#">登陆</a>
-        <a href="#">注册</a>
+        <router-link class="nav-link-left" to="/login">登陆</router-link>
+        <router-link class="nav-link-left" to="/register">注册</router-link>
       </div>
       <div class="right">
-        <a class="nav-link-right" href="#">个人中心版</a>
+        <router-link class="nav-link-right" to="home">个人中心版</router-link>
         <a class="nav-link-right" href="#">免费发布信息</a>
         <a class="nav-link-right" href="#">APP下载</a>
       </div>

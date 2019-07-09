@@ -1,17 +1,33 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/"></router-link>
-    </div>
+    <Top />
+    <Search />
+    <Navbar></Navbar>
     <router-view />
+    <Footer></Footer>
   </div>
 </template>
 
+<script>
+import Top from '@/components/Header/top.vue'
+import Search from '@/components/Header/search.vue'
+import Footer from '@/components/Footer/footer.vue'
+import Login from '@/views/Login/login.vue'
+import Navbar from '@/components/Navbar/navbar.vue'
+export default {
+  name: 'App',
+  components: {
+    Top, Search, Login, Footer, Navbar
+  }
+}
+</script>
 
 
-<style>
+<style lang="less">
 @import url("../src/assets/base.less");
 @import url("../src/assets/normalize.css");
+@import url("./assets/font-awesome.css");
+
 #app {
   font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -19,7 +35,8 @@
   /* text-align: center; */
   color: #464459;
 }
-#nav {
-  /* padding: 30px; */
+.inner {
+  margin: 0 auto;
+  width: @base-width;
 }
 </style>

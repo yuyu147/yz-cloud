@@ -12,14 +12,32 @@
           <br />文明实践中心
         </p>
       </div>
+      <!-- 登陆注册 -->
+      <Login v-if="$route.name == 'login'" />
+      <Register v-if="$route.name == 'register'" />
     </div>
   </div>
 </template>
 
 <script>
+import Login from "../../components/Login/login";
+import Register from "../../components/Register/register";
 export default {
   name: 'login',
-  data () { }
+  components: { Login, Register },
+  data () { },
+  created () { },
+
+  beforeRouteEnter (to, from, next) {
+    console.log(to);
+    next()
+  },
+
+  watch: {
+    $route (val) {
+      console.log(val)
+    }
+  }
 }
 </script>
 
